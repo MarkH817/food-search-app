@@ -1,0 +1,26 @@
+{
+  "name": "food-search-app",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An app that shows recipes based on the ingredients available.",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.unl.edu:roselight/food-search-app.git"
+  },
+  "keywords": [
+    "food",
+    "recipe",
+    "ingredients",
+    "electron",
+    "desktop"
+  ],
+  "author": "Mark Hernandez <mh81796@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.15"
+  }
+}
