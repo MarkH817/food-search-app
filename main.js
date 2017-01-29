@@ -1,6 +1,7 @@
 const electron = require('electron')
 const {app, BrowserWindow} = electron
 const path = require('path')
+const elemon = require('elemon')
 
 let mainWindow
 
@@ -21,20 +22,30 @@ function createWindow () {
 
   mainWindow.webContents.openDevTools()
 
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', () => {
     mainWindow = null
   })
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createWindow()
 
-app.on('window-all-closed', function () {
+  if (process.env.NODE_ENV === 'dev') {
+    elemon({
+      app: app,
+      mainFile: 'main.js',
+      bws: [{bw: mainWindow, res: []}]
+    })
+  }
+})
+
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
-app.on('activate', function () {
+app.on('activate', () => {
   if (mainWindow === null) {
     createWindow()
   }
