@@ -5,7 +5,7 @@
   "description": "An app that shows recipes based on the ingredients available.",
   "main": "main.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev electron .",
+    "start": "nodemon main.js",
     "test": "standard"
   },
   "repository": {
@@ -15,16 +15,15 @@
   "keywords": [
     "food",
     "recipe",
-    "ingredients",
-    "electron",
-    "desktop"
+    "ingredients"
   ],
   "author": "Mark Hernandez <mh81796@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "cross-env": "^3.1.4",
-    "electron": "^1.4.15",
-    "elemon": "^5.0.2",
+    "nodemon": "^1.11.0",
     "standard": "*"
+  },
+  "dependencies": {
+    "express": "^4.14.1"
   }
 }

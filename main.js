@@ -1,52 +1,11 @@
-const electron = require('electron')
-const {app, BrowserWindow} = electron
+const express = require('express')
+const app = express()
 const path = require('path')
-const elemon = require('elemon')
 
-let mainWindow
+let staticFiles = path.join(__dirname, 'public')
 
-function createWindow () {
-  mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
-    minWidth: 800,
-    minHeight: 600,
-    show: false
-  })
+app.use(express.static(staticFiles))
 
-  mainWindow.once('ready-to-show', () => {
-    mainWindow.show()
-  })
-
-  mainWindow.loadURL(path.join('file://', __dirname, 'app/index.html'))
-
-  mainWindow.webContents.openDevTools()
-
-  mainWindow.on('closed', () => {
-    mainWindow = null
-  })
-}
-
-app.on('ready', () => {
-  createWindow()
-
-  if (process.env.NODE_ENV === 'dev') {
-    elemon({
-      app: app,
-      mainFile: 'main.js',
-      bws: [{bw: mainWindow, res: []}]
-    })
-  }
-})
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
-
-app.on('activate', () => {
-  if (mainWindow === null) {
-    createWindow()
-  }
+app.listen(3030, () => {
+  console.log('Example app listening on port 3030!')
 })
