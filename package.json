@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "description": "An app that shows recipes based on the ingredients available.",
-  "main": "main.js",
+  "main": "lib/main.js",
   "scripts": {
-    "start": "nodemon main.js",
+    "start": "nodemon lib/main.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/main.js",
     "test": "standard"
   },
   "repository": {
@@ -20,6 +22,8 @@
   "author": "Mark Hernandez <mh81796@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
     "nodemon": "^1.11.0",
     "standard": "*"
   },
