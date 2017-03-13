@@ -10,7 +10,364 @@
     <% include ../partials/navbar %>
 
     <div class="container">
-      <h1>Kitchen Profile</h1>
+      <div class="page-header">
+        <h1>Kitchen Profile</h1>
+      </div>
+
+      <form id="kitchen-input" role="form" action="/kitchen-profile" method="post">
+        <section class="tools-equipment">
+          <h2>Tools &amp; Equipment</h2>
+
+          <section class="select-group">
+            <label class="btn btn-default" for="tae-1">
+              <input id="tae-1" type="checkbox" name="blender">
+              Blender
+            </label>
+
+            <label class="btn btn-default" for="tae-2">
+              <input id="tae-2" type="checkbox" name="cookieSheet">
+              Cookie Sheet
+            </label>
+
+            <label class="btn btn-default" for="tae-3">
+              <input id="tae-3" type="checkbox" name="fridgeFreezer">
+              Fridge/Freezer
+            </label>
+
+            <label class="btn btn-default" for="tae-4">
+              <input id="tae-4" type="checkbox" name="grill">
+              Grill
+            </label>
+
+            <label class="btn btn-default" for="tae-5">
+              <input id="tae-5" type="checkbox" name="microwave">
+              Microwave
+            </label>
+
+            <label class="btn btn-default" for="tae-6">
+              <input id="tae-6" type="checkbox" name="potsPans">
+              Pots &amp; Pans
+            </label>
+
+            <label class="btn btn-default" for="tae-7">
+              <input id="tae-7" type="checkbox" name="stoveOven">
+              Stove/Oven
+            </label>
+
+            <label class="btn btn-default" for="tae-8">
+              <input id="tae-8" type="checkbox" name="toaster">
+              Toaster
+            </label>
+          </section>
+        </section>
+
+        <section class="ingredients">
+          <h2>Ingredients</h2>
+
+          <div class="sliding-menu">
+            <div class="ingredient-category current">
+              <h4>Baking/Grain</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-1-1">
+                  <input id="ingr-1-1" type="checkbox" name="bakingPowder">
+                  Baking Powder
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-2">
+                  <input id="ingr-1-2" type="checkbox" name="bakingSoda">
+                  Baking Soda
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-3">
+                  <input id="ingr-1-3" type="checkbox" name="sugar">
+                  Sugar (General)
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-4">
+                  <input id="ingr-1-4" type="checkbox" name="butterMargarine">
+                  Butter/Margarine
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-5">
+                  <input id="ingr-1-5" type="checkbox" name="bread">
+                  Bread (General)
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-6">
+                  <input id="ingr-1-6" type="checkbox" name="rice">
+                  Rice
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-7">
+                  <input id="ingr-1-7" type="checkbox" name="yeast">
+                  Yeast
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-8">
+                  <input id="ingr-1-8" type="checkbox" name="vanillaExtract">
+                  Vanilla Extract
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-9">
+                  <input id="ingr-1-9" type="checkbox" name="pasta">
+                  Pasta
+                </label>
+
+                <label class="btn btn-default" for="ingr-1-10">
+                  <input id="ingr-1-10" type="checkbox" name="flour">
+                  Flour
+                </label>
+              </section>
+            </div>
+
+            <div class="ingredient-category hide">
+              <h4>Dairy</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-2-1">
+                  <input id="ingr-2-1" type="checkbox" name="creamCheese">
+                  Cream Cheese
+                </label>
+
+                <label class="btn btn-default" for="ingr-2-2">
+                  <input id="ingr-2-2" type="checkbox" name="cheese">
+                  Cheese (General)
+                </label>
+
+                <label class="btn btn-default" for="ingr-2-3">
+                  <input id="ingr-2-3" type="checkbox" name="milk">
+                  Milk (General)
+                </label>
+
+                <label class="btn btn-default" for="ingr-2-4">
+                  <input id="ingr-2-4" type="checkbox" name="iceCream">
+                  Ice Cream
+                </label>
+
+                <label class="btn btn-default" for="ingr-2-5">
+                  <input id="ingr-2-5" type="checkbox" name="whippedCream">
+                  Whipped Cream
+                </label>
+              </section>
+            </div>
+
+            <div class="ingredient-category hide">
+              <h4>Fruit</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-3-1">
+                  <input id="ingr-3-1" type="checkbox" name="apples">
+                  Apples
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-2">
+                  <input id="ingr-3-2" type="checkbox" name="bananas">
+                  Bananas
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-3">
+                  <input id="ingr-3-3" type="checkbox" name="cherries">
+                  Cherries
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-4">
+                  <input id="ingr-3-4" type="checkbox" name="lemons">
+                  Lemons
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-5">
+                  <input id="ingr-3-5" type="checkbox" name="grapes">
+                  Grapes
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-6">
+                  <input id="ingr-3-6" type="checkbox" name="tomatoes">
+                  Tomatoes
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-7">
+                  <input id="ingr-3-7" type="checkbox" name="pomegranate">
+                  Pomegranate
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-8">
+                  <input id="ingr-3-8" type="checkbox" name="oranges">
+                  Oranges
+                </label>
+
+                <label class="btn btn-default" for="ingr-3-9">
+                  <input id="ingr-3-9" type="checkbox" name="blueberries">
+                  Blueberries
+                </label>
+              </section>
+            </div>
+
+            <div class="ingredient-category hide">
+              <h4>Meat/Poultry/Seafood</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-4-1">
+                  <input id="ingr-4-1" type="checkbox" name="beef">
+                  Beef
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-2">
+                  <input id="ingr-4-2" type="checkbox" name="chicken">
+                  Chicken
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-3">
+                  <input id="ingr-4-3" type="checkbox" name="pork">
+                  Pork
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-4">
+                  <input id="ingr-4-4" type="checkbox" name="eggs">
+                  Eggs
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-5">
+                  <input id="ingr-4-5" type="checkbox" name="fish">
+                  Fish (General)
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-6">
+                  <input id="ingr-4-6" type="checkbox" name="bacon">
+                  Bacon
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-7">
+                  <input id="ingr-4-7" type="checkbox" name="ham">
+                  Ham
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-8">
+                  <input id="ingr-4-8" type="checkbox" name="turkey">
+                  Turkey
+                </label>
+
+                <label class="btn btn-default" for="ingr-4-9">
+                  <input id="ingr-4-9" type="checkbox" name="sausage">
+                  Sausage
+                </label>
+              </section>
+            </div>
+
+            <div class="ingredient-category hide">
+              <h4>Spices/Herbs/Condiments</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-5-1">
+                  <input id="ingr-5-1" type="checkbox" name="cinnamon">
+                  Cinnamon
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-2">
+                  <input id="ingr-5-2" type="checkbox" name="honey">
+                  Honey
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-3">
+                  <input id="ingr-5-3" type="checkbox" name="blackPepper">
+                  Black Pepper
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-4">
+                  <input id="ingr-5-4" type="checkbox" name="ketchup">
+                  Ketchup
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-5">
+                  <input id="ingr-5-5" type="checkbox" name="mustard">
+                  Mustard
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-6">
+                  <input id="ingr-5-6" type="checkbox" name="relish">
+                  Relish
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-7">
+                  <input id="ingr-5-7" type="checkbox" name="mayo">
+                  Mayo
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-8">
+                  <input id="ingr-5-8" type="checkbox" name="mint">
+                  Mint
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-9">
+                  <input id="ingr-5-9" type="checkbox" name="bbqSauce">
+                  BBQ Sauce
+                </label>
+
+                <label class="btn btn-default" for="ingr-5-10">
+                  <input id="ingr-5-10" type="checkbox" name="peanutButter">
+                  Peanut Butter
+                </label>
+              </section>
+            </div>
+
+            <div class="ingredient-category hide">
+              <h4>Vegetables</h4>
+
+              <section class="select-group">
+                <label class="btn btn-default" for="ingr-6-1">
+                  <input id="ingr-6-1" type="checkbox" name="broccoli">
+                  Broccoli
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-2">
+                  <input id="ingr-6-2" type="checkbox" name="carrots">
+                  Carrots
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-3">
+                  <input id="ingr-6-3" type="checkbox" name="cauliflower">
+                  Cauliflower
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-4">
+                  <input id="ingr-6-4" type="checkbox" name="corn">
+                  Corn
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-5">
+                  <input id="ingr-6-5" type="checkbox" name="cucumber">
+                  Cucumber
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-6">
+                  <input id="ingr-6-6" type="checkbox" name="lettuce">
+                  Lettuce
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-7">
+                  <input id="ingr-6-7" type="checkbox" name="onions">
+                  Onions
+                </label>
+
+                <label class="btn btn-default" for="ingr-6-8">
+                  <input id="ingr-6-8" type="checkbox" name="potatoes">
+                  Potatoes
+                </label>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <div class="arrows">
+          <button id="prev" type="button" class="btn btn-default">&lt; Previous</button>
+          <button id="next" type="button" class="btn btn-default">Next &gt;</button>
+        </div>
+
+        <div class="submission">
+          <a class="btn btn-default" href="/kitchen-profile">Reset</a>
+          <input class="btn btn-primary" type="submit" value="Save">
+        </div>
+      </form>
     </div>
 
     <% include ../partials/scripts %>
