@@ -1,3 +1,25 @@
 :root {
   font-size: 14px;
 }
+
+#kitchen-input label {
+  font-weight: normal;
+  margin: .5em 1em;
+}
+
+#kitchen-input .hide {
+  display: none;
+}
+
+.sliding-menu {
+  min-height: 10em;
+}
+
+.submission, .arrows {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.arrows button {
+  display: inline-block;
+}
