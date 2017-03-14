@@ -4,13 +4,63 @@
     <meta charset="utf-8">
     <title>Search - Food Search App</title>
 
+
     <% include ../partials/head %>
   </head>
   <body>
     <% include ../partials/navbar %>
 
     <div class="container">
+
+
       <h1>Search</h1>
+      <form action = "http://www.google.com"/>
+       <input type = "Text" name = "search" placeholder = "search your own recipe"/>
+       <input type = "submit" value = "Enter"/>
+       <input type = "submit" value ="Advanced options"/>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Prep/Cook Time</th>
+        <th>Ingredients</th>
+        <td>Missing Ingredients</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="http://s2.cdn.xiachufang.com/2ea3bbea884411e6b87c0242ac110003_650w_650h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />   <br/>cheese cake</td>
+
+        <td>15 mins</td>
+        <td>cracker crumbs, cheese, cream，butter， pecans，sugar</td>
+        <td>pecans</td>
+      </tr>
+      <tr>
+        <td><img src="http://s2.cdn.xiachufang.com/dfc2fb4a059c11e7947d0242ac110002_1280w_1280h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />   <br/>Sweet lorem</td>
+
+        <td>20 mins</td>
+        <td>Cream, stawberries and sugar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><img src="http://s2.cdn.xiachufang.com/78b1097c8a4211e6b87c0242ac110003_1280w_722h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />   <br/>Sweet Treat</td>
+
+        <td>30 mins</td>
+        <td>bread, butter</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td><img src="http://s2.cdn.xiachufang.com/8f8ebb20880411e6b87c0242ac110003_895w_1171h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />   <br/>Birthday cake</td>
+
+        <td>50 mins</td>
+        <td>bread , sugar, cream，strawberry，milk，eggs</td>
+        <td></td>
+    </tbody>
+  </table>
+
+
     </div>
 
     <% include ../partials/scripts %>
