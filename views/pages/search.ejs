@@ -11,13 +11,29 @@
     <% include ../partials/navbar %>
 
     <div class="container">
+      <div class="page-header">
+        <h1>
+          Search
+          <% if (!profile_set) { %>
+            <small>
+              <span class="glyphicon glyphicon-info-sign" title="Set up a Kitchen Profile for better results"></span>
+            </small>
+          <% } %>
+        </h1>
+      </div>
 
+      <div class="row">
+        <form action="/search" method="post" class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" name="search" placeholder = "Recipe search..."/>
+            <span class="input-group-btn">
+              <input type="submit" class="btn btn-primary" value ="Search"/>
+            </span>
+          </div>
+        </form>
+      </div>
 
-      <h1>Search</h1>
-      <form action = "http://www.google.com"/>
-       <input type = "Text" name = "search" placeholder = "search your own recipe"/>
-       <input type = "submit" value = "Enter"/>
-
+      <br><br>
 
   <table class="table table-bordered">
     <thead>
@@ -26,7 +42,9 @@
         <th>Title</th>
         <th>Prep/Cook Time</th>
         <th>Ingredients</th>
-        <td>Missing Ingredients</td>
+        <% if (profile_set) { %>
+          <th>Missing Ingredients</th>
+        <% } %>
       </tr>
     </thead>
     <tbody>
@@ -36,10 +54,12 @@
           <img src="http://s2.cdn.xiachufang.com/2ea3bbea884411e6b87c0242ac110003_650w_650h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
         </a>
         </td>
-        <td><a href="/recipe">cheesecake</a></td>
+        <td><a href="/recipe">Cheesecake</a></td>
         <td>15 mins</td>
-        <td>cracker crumbs, cheese, cream，butter， pecans，sugar</td>
-        <td>pecans</td>
+        <td>Cream cheese, Butter, Sugar</td>
+        <% if (profile_set) { %>
+          <td>Missing Butter</td>
+        <% } %>
       </tr>
       <tr>
         <td>
@@ -49,8 +69,10 @@
         </td>
         <td><a href="/recipe">Sweet lorem</a></td>
         <td>20 mins</td>
-        <td>Cream, stawberries and sugar</td>
-        <td></td>
+        <td>Milk, Stawberries, Flour, Sugar</td>
+        <% if (profile_set) { %>
+          <td>Have all ingredients</td>
+        <% } %>
       </tr>
       <tr>
         <td>
@@ -60,9 +82,10 @@
         </td>
         <td><a href="/recipe">Sweet Treat</a></td>
         <td>30 mins</td>
-        <td>bread, butter</td>
-        <td></td>
-
+        <td>Bread, Butter</td>
+        <% if (profile_set) { %>
+          <td>Missing Butter</td>
+        <% } %>
       </tr>
       <tr>
         <td>
@@ -70,10 +93,12 @@
           <img src="http://s2.cdn.xiachufang.com/8f8ebb20880411e6b87c0242ac110003_895w_1171h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
         </a>
         </td>
-        <td><a href="/recipe">Birthday caket</a></td>
+        <td><a href="/recipe">Birthday Cake</a></td>
         <td>50 mins</td>
-        <td>bread , sugar, cream，strawberry，milk，eggs</td>
-        <td></td>
+        <td>Flour, Sugar, Ice Cream, Strawberries, Milk, Eggs</td>
+        <% if (profile_set) { %>
+          <td>Missing ice cream</td>
+        <% } %>
     </tbody>
   </table>
 

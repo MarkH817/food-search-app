@@ -14,48 +14,68 @@
         <h1>Kitchen Profile</h1>
       </div>
 
+      <% if(_reset) { %>
+        <div class="alert alert-info" role="alert">
+          Kitchen profile has been reset.
+        </div>
+      <% } %>
+
+      <% if(_saved) { %>
+        <div class="alert alert-success" role="alert">
+          Kitchen profile has been saved.
+        </div>
+      <% } %>
+
       <form id="kitchen-input" role="form" action="/kitchen-profile" method="post">
         <section class="tools-equipment">
           <h2>Tools &amp; Equipment</h2>
 
           <section class="select-group">
             <label class="btn btn-default" for="tae-1">
-              <input id="tae-1" type="checkbox" name="blender">
+              <input id="tae-1" type="checkbox" name="blender"
+              <% if(blender){ %> checked <% } %> >
               Blender
             </label>
 
             <label class="btn btn-default" for="tae-2">
-              <input id="tae-2" type="checkbox" name="cookieSheet">
+              <input id="tae-2" type="checkbox" name="cookieSheet"
+              <% if(cookieSheet){ %> checked <% } %> >
               Cookie Sheet
             </label>
 
             <label class="btn btn-default" for="tae-3">
-              <input id="tae-3" type="checkbox" name="fridgeFreezer">
+              <input id="tae-3" type="checkbox" name="fridgeFreezer"
+              <% if(fridgeFreezer){ %> checked <% } %> >
               Fridge/Freezer
             </label>
 
             <label class="btn btn-default" for="tae-4">
-              <input id="tae-4" type="checkbox" name="grill">
+              <input id="tae-4" type="checkbox" name="grill"
+              <% if(grill){ %> checked <% } %> >
               Grill
             </label>
 
             <label class="btn btn-default" for="tae-5">
-              <input id="tae-5" type="checkbox" name="microwave">
+              <input id="tae-5" type="checkbox" name="microwave"
+              <% if(microwave){ %> checked <% } %> >
               Microwave
             </label>
 
             <label class="btn btn-default" for="tae-6">
-              <input id="tae-6" type="checkbox" name="potsPans">
+              <input id="tae-6" type="checkbox" name="potsPans"
+              <% if(potsPans){ %> checked <% } %> >
               Pots &amp; Pans
             </label>
 
             <label class="btn btn-default" for="tae-7">
-              <input id="tae-7" type="checkbox" name="stoveOven">
+              <input id="tae-7" type="checkbox" name="stoveOven"
+              <% if(stoveOven){ %> checked <% } %> >
               Stove/Oven
             </label>
 
             <label class="btn btn-default" for="tae-8">
-              <input id="tae-8" type="checkbox" name="toaster">
+              <input id="tae-8" type="checkbox" name="toaster"
+              <% if(toaster){ %> checked <% } %> >
               Toaster
             </label>
           </section>
@@ -70,52 +90,62 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-1-1">
-                  <input id="ingr-1-1" type="checkbox" name="bakingPowder">
+                  <input id="ingr-1-1" type="checkbox" name="bakingPowder"
+                  <% if(bakingPowder){ %> checked <% } %> >
                   Baking Powder
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-2">
-                  <input id="ingr-1-2" type="checkbox" name="bakingSoda">
+                  <input id="ingr-1-2" type="checkbox" name="bakingSoda"
+                  <% if(bakingSoda){ %> checked <% } %> >
                   Baking Soda
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-3">
-                  <input id="ingr-1-3" type="checkbox" name="sugar">
+                  <input id="ingr-1-3" type="checkbox" name="sugar"
+                  <% if(sugar){ %> checked <% } %> >
                   Sugar (General)
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-4">
-                  <input id="ingr-1-4" type="checkbox" name="butterMargarine">
+                  <input id="ingr-1-4" type="checkbox" name="butterMargarine"
+                  <% if(butterMargarine){ %> checked <% } %> >
                   Butter/Margarine
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-5">
-                  <input id="ingr-1-5" type="checkbox" name="bread">
+                  <input id="ingr-1-5" type="checkbox" name="bread"
+                  <% if(bread){ %> checked <% } %> >
                   Bread (General)
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-6">
-                  <input id="ingr-1-6" type="checkbox" name="rice">
+                  <input id="ingr-1-6" type="checkbox" name="rice"
+                  <% if(rice){ %> checked <% } %> >
                   Rice
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-7">
-                  <input id="ingr-1-7" type="checkbox" name="yeast">
+                  <input id="ingr-1-7" type="checkbox" name="yeast"
+                  <% if(yeast){ %> checked <% } %> >
                   Yeast
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-8">
-                  <input id="ingr-1-8" type="checkbox" name="vanillaExtract">
+                  <input id="ingr-1-8" type="checkbox" name="vanillaExtract"
+                  <% if(vanillaExtract){ %> checked <% } %> >
                   Vanilla Extract
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-9">
-                  <input id="ingr-1-9" type="checkbox" name="pasta">
+                  <input id="ingr-1-9" type="checkbox" name="pasta"
+                  <% if(pasta){ %> checked <% } %> >
                   Pasta
                 </label>
 
                 <label class="btn btn-default" for="ingr-1-10">
-                  <input id="ingr-1-10" type="checkbox" name="flour">
+                  <input id="ingr-1-10" type="checkbox" name="flour"
+                  <% if(flour){ %> checked <% } %> >
                   Flour
                 </label>
               </section>
@@ -126,27 +156,32 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-2-1">
-                  <input id="ingr-2-1" type="checkbox" name="creamCheese">
+                  <input id="ingr-2-1" type="checkbox" name="creamCheese"
+                  <% if(creamCheese){ %> checked <% } %> >
                   Cream Cheese
                 </label>
 
                 <label class="btn btn-default" for="ingr-2-2">
-                  <input id="ingr-2-2" type="checkbox" name="cheese">
+                  <input id="ingr-2-2" type="checkbox" name="cheese"
+                  <% if(cheese){ %> checked <% } %> >
                   Cheese (General)
                 </label>
 
                 <label class="btn btn-default" for="ingr-2-3">
-                  <input id="ingr-2-3" type="checkbox" name="milk">
+                  <input id="ingr-2-3" type="checkbox" name="milk"
+                  <% if(milk){ %> checked <% } %> >
                   Milk (General)
                 </label>
 
                 <label class="btn btn-default" for="ingr-2-4">
-                  <input id="ingr-2-4" type="checkbox" name="iceCream">
+                  <input id="ingr-2-4" type="checkbox" name="iceCream"
+                  <% if(iceCream){ %> checked <% } %> >
                   Ice Cream
                 </label>
 
                 <label class="btn btn-default" for="ingr-2-5">
-                  <input id="ingr-2-5" type="checkbox" name="whippedCream">
+                  <input id="ingr-2-5" type="checkbox" name="whippedCream"
+                  <% if(whippedCream){ %> checked <% } %> >
                   Whipped Cream
                 </label>
               </section>
@@ -157,47 +192,56 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-3-1">
-                  <input id="ingr-3-1" type="checkbox" name="apples">
+                  <input id="ingr-3-1" type="checkbox" name="apples"
+                  <% if(apples){ %> checked <% } %> >
                   Apples
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-2">
-                  <input id="ingr-3-2" type="checkbox" name="bananas">
+                  <input id="ingr-3-2" type="checkbox" name="bananas"
+                  <% if(bananas){ %> checked <% } %> >
                   Bananas
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-3">
-                  <input id="ingr-3-3" type="checkbox" name="cherries">
+                  <input id="ingr-3-3" type="checkbox" name="cherries"
+                  <% if(cherries){ %> checked <% } %> >
                   Cherries
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-4">
-                  <input id="ingr-3-4" type="checkbox" name="lemons">
+                  <input id="ingr-3-4" type="checkbox" name="lemons"
+                  <% if(lemons){ %> checked <% } %> >
                   Lemons
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-5">
-                  <input id="ingr-3-5" type="checkbox" name="grapes">
+                  <input id="ingr-3-5" type="checkbox" name="grapes"
+                  <% if(grapes){ %> checked <% } %> >
                   Grapes
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-6">
-                  <input id="ingr-3-6" type="checkbox" name="tomatoes">
+                  <input id="ingr-3-6" type="checkbox" name="tomatoes"
+                  <% if(tomatoes){ %> checked <% } %> >
                   Tomatoes
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-7">
-                  <input id="ingr-3-7" type="checkbox" name="pomegranate">
+                  <input id="ingr-3-7" type="checkbox" name="pomegranate"
+                  <% if(pomegranate){ %> checked <% } %> >
                   Pomegranate
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-8">
-                  <input id="ingr-3-8" type="checkbox" name="oranges">
+                  <input id="ingr-3-8" type="checkbox" name="oranges"
+                  <% if(oranges){ %> checked <% } %> >
                   Oranges
                 </label>
 
                 <label class="btn btn-default" for="ingr-3-9">
-                  <input id="ingr-3-9" type="checkbox" name="blueberries">
+                  <input id="ingr-3-9" type="checkbox" name="blueberries"
+                  <% if(blueberries){ %> checked <% } %> >
                   Blueberries
                 </label>
               </section>
@@ -208,47 +252,56 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-4-1">
-                  <input id="ingr-4-1" type="checkbox" name="beef">
+                  <input id="ingr-4-1" type="checkbox" name="beef"
+                  <% if(beef){ %> checked <% } %> >
                   Beef
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-2">
-                  <input id="ingr-4-2" type="checkbox" name="chicken">
+                  <input id="ingr-4-2" type="checkbox" name="chicken"
+                  <% if(chicken){ %> checked <% } %> >
                   Chicken
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-3">
-                  <input id="ingr-4-3" type="checkbox" name="pork">
+                  <input id="ingr-4-3" type="checkbox" name="pork"
+                  <% if(pork){ %> checked <% } %> >
                   Pork
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-4">
-                  <input id="ingr-4-4" type="checkbox" name="eggs">
+                  <input id="ingr-4-4" type="checkbox" name="eggs"
+                  <% if(eggs){ %> checked <% } %> >
                   Eggs
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-5">
-                  <input id="ingr-4-5" type="checkbox" name="fish">
+                  <input id="ingr-4-5" type="checkbox" name="fish"
+                  <% if(fish){ %> checked <% } %> >
                   Fish (General)
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-6">
-                  <input id="ingr-4-6" type="checkbox" name="bacon">
+                  <input id="ingr-4-6" type="checkbox" name="bacon"
+                  <% if(bacon){ %> checked <% } %> >
                   Bacon
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-7">
-                  <input id="ingr-4-7" type="checkbox" name="ham">
+                  <input id="ingr-4-7" type="checkbox" name="ham"
+                  <% if(ham){ %> checked <% } %> >
                   Ham
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-8">
-                  <input id="ingr-4-8" type="checkbox" name="turkey">
+                  <input id="ingr-4-8" type="checkbox" name="turkey"
+                  <% if(turkey){ %> checked <% } %> >
                   Turkey
                 </label>
 
                 <label class="btn btn-default" for="ingr-4-9">
-                  <input id="ingr-4-9" type="checkbox" name="sausage">
+                  <input id="ingr-4-9" type="checkbox" name="sausage"
+                  <% if(sausage){ %> checked <% } %> >
                   Sausage
                 </label>
               </section>
@@ -259,52 +312,62 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-5-1">
-                  <input id="ingr-5-1" type="checkbox" name="cinnamon">
+                  <input id="ingr-5-1" type="checkbox" name="cinnamon"
+                  <% if(cinnamon){ %> checked <% } %> >
                   Cinnamon
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-2">
-                  <input id="ingr-5-2" type="checkbox" name="honey">
+                  <input id="ingr-5-2" type="checkbox" name="honey"
+                  <% if(honey){ %> checked <% } %> >
                   Honey
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-3">
-                  <input id="ingr-5-3" type="checkbox" name="blackPepper">
+                  <input id="ingr-5-3" type="checkbox" name="blackPepper"
+                  <% if(blackPepper){ %> checked <% } %> >
                   Black Pepper
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-4">
-                  <input id="ingr-5-4" type="checkbox" name="ketchup">
+                  <input id="ingr-5-4" type="checkbox" name="ketchup"
+                  <% if(ketchup){ %> checked <% } %> >
                   Ketchup
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-5">
-                  <input id="ingr-5-5" type="checkbox" name="mustard">
+                  <input id="ingr-5-5" type="checkbox" name="mustard"
+                  <% if(mustard){ %> checked <% } %> >
                   Mustard
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-6">
-                  <input id="ingr-5-6" type="checkbox" name="relish">
+                  <input id="ingr-5-6" type="checkbox" name="relish"
+                  <% if(relish){ %> checked <% } %> >
                   Relish
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-7">
-                  <input id="ingr-5-7" type="checkbox" name="mayo">
+                  <input id="ingr-5-7" type="checkbox" name="mayo"
+                  <% if(mayo){ %> checked <% } %> >
                   Mayo
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-8">
-                  <input id="ingr-5-8" type="checkbox" name="mint">
+                  <input id="ingr-5-8" type="checkbox" name="mint"
+                  <% if(mint){ %> checked <% } %> >
                   Mint
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-9">
-                  <input id="ingr-5-9" type="checkbox" name="bbqSauce">
+                  <input id="ingr-5-9" type="checkbox" name="bbqSauce"
+                  <% if(bbqSauce){ %> checked <% } %> >
                   BBQ Sauce
                 </label>
 
                 <label class="btn btn-default" for="ingr-5-10">
-                  <input id="ingr-5-10" type="checkbox" name="peanutButter">
+                  <input id="ingr-5-10" type="checkbox" name="peanutButter"
+                  <% if(peanutButter){ %> checked <% } %> >
                   Peanut Butter
                 </label>
               </section>
@@ -315,42 +378,50 @@
 
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-6-1">
-                  <input id="ingr-6-1" type="checkbox" name="broccoli">
+                  <input id="ingr-6-1" type="checkbox" name="broccoli"
+                  <% if(broccoli){ %> checked <% } %> >
                   Broccoli
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-2">
-                  <input id="ingr-6-2" type="checkbox" name="carrots">
+                  <input id="ingr-6-2" type="checkbox" name="carrots"
+                  <% if(carrots){ %> checked <% } %> >
                   Carrots
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-3">
-                  <input id="ingr-6-3" type="checkbox" name="cauliflower">
+                  <input id="ingr-6-3" type="checkbox" name="cauliflower"
+                  <% if(cauliflower){ %> checked <% } %> >
                   Cauliflower
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-4">
-                  <input id="ingr-6-4" type="checkbox" name="corn">
+                  <input id="ingr-6-4" type="checkbox" name="corn"
+                  <% if(corn){ %> checked <% } %> >
                   Corn
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-5">
-                  <input id="ingr-6-5" type="checkbox" name="cucumber">
+                  <input id="ingr-6-5" type="checkbox" name="cucumber"
+                  <% if(cucumber){ %> checked <% } %> >
                   Cucumber
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-6">
-                  <input id="ingr-6-6" type="checkbox" name="lettuce">
+                  <input id="ingr-6-6" type="checkbox" name="lettuce"
+                  <% if(lettuce){ %> checked <% } %> >
                   Lettuce
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-7">
-                  <input id="ingr-6-7" type="checkbox" name="onions">
+                  <input id="ingr-6-7" type="checkbox" name="onions"
+                  <% if(onions){ %> checked <% } %> >
                   Onions
                 </label>
 
                 <label class="btn btn-default" for="ingr-6-8">
-                  <input id="ingr-6-8" type="checkbox" name="potatoes">
+                  <input id="ingr-6-8" type="checkbox" name="potatoes"
+                  <% if(potatoes){ %> checked <% } %> >
                   Potatoes
                 </label>
               </section>
@@ -360,15 +431,20 @@
 
         <div class="arrows">
           <button id="prev" type="button" class="btn btn-default">&lt; Previous</button>
+          <span id="location" class="btn">1 / 6</span>
           <button id="next" type="button" class="btn btn-default">Next &gt;</button>
         </div>
 
         <div class="submission">
-          <a class="btn btn-default" href="/kitchen-profile">Reset</a>
+          <a class="btn btn-default" href="/reset">Reset</a>
           <input class="btn btn-primary" type="submit" value="Save">
         </div>
       </form>
     </div>
+
+    <script type="text/javascript">
+      var page = 1
+    </script>
 
     <% include ../partials/scripts %>
   </body>
