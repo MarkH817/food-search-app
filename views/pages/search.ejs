@@ -35,73 +35,76 @@
 
       <br><br>
 
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Thumbnail</th>
-        <th>Title</th>
-        <th>Prep/Cook Time</th>
-        <th>Ingredients</th>
-        <% if (profile_set) { %>
-          <th>Missing Ingredients</th>
-        <% } %>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a href="/recipe">
-          <img src="http://s2.cdn.xiachufang.com/2ea3bbea884411e6b87c0242ac110003_650w_650h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
-        </a>
-        </td>
-        <td><a href="/recipe">Cheesecake</a></td>
-        <td>15 mins</td>
-        <td>Cream cheese, Butter, Sugar</td>
-        <% if (profile_set) { %>
-          <td>Missing Butter</td>
-        <% } %>
-      </tr>
-      <tr>
-        <td>
-          <a href="/recipe">
-          <img src="http://s2.cdn.xiachufang.com/dfc2fb4a059c11e7947d0242ac110002_1280w_1280h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
-        </a>
-        </td>
-        <td><a href="/recipe">Sweet lorem</a></td>
-        <td>20 mins</td>
-        <td>Milk, Stawberries, Flour, Sugar</td>
-        <% if (profile_set) { %>
-          <td>Have all ingredients</td>
-        <% } %>
-      </tr>
-      <tr>
-        <td>
-          <a href="/recipe">
-          <img src="http://s2.cdn.xiachufang.com/78b1097c8a4211e6b87c0242ac110003_1280w_722h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
-        </a>
-        </td>
-        <td><a href="/recipe">Sweet Treat</a></td>
-        <td>30 mins</td>
-        <td>Bread, Butter</td>
-        <% if (profile_set) { %>
-          <td>Missing Butter</td>
-        <% } %>
-      </tr>
-      <tr>
-        <td>
-          <a href="/recipe">
-          <img src="http://s2.cdn.xiachufang.com/8f8ebb20880411e6b87c0242ac110003_895w_1171h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
-        </a>
-        </td>
-        <td><a href="/recipe">Birthday Cake</a></td>
-        <td>50 mins</td>
-        <td>Flour, Sugar, Ice Cream, Strawberries, Milk, Eggs</td>
-        <% if (profile_set) { %>
-          <td>Missing ice cream</td>
-        <% } %>
-    </tbody>
-  </table>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Thumbnail</th>
+            <th>Title</th>
+            <th>Prep/Cook Time</th>
+            <th>Ingredients</th>
+            <% if (profile_set) { %>
+              <th>* Missing Ingredients</th>
+            <% } %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="/recipe">
+              <img src="http://s2.cdn.xiachufang.com/2ea3bbea884411e6b87c0242ac110003_650w_650h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
+            </a>
+            </td>
+            <td><a href="/recipe">Cheesecake</a></td>
+            <td>35 mins</td>
+            <td>Cream cheese, Butter, Sugar</td>
+            <% if (profile_set) { %>
+              <td>Missing Butter</td>
+            <% } %>
+          </tr>
+          <tr>
+            <td>
+              <a href="/recipe">
+              <img src="http://s2.cdn.xiachufang.com/dfc2fb4a059c11e7947d0242ac110002_1280w_1280h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
+            </a>
+            </td>
+            <td><a href="/recipe">Sweet lorem</a></td>
+            <td>50 mins</td>
+            <td>Milk, Stawberries, Flour, Sugar</td>
+            <% if (profile_set) { %>
+              <td>Have all ingredients</td>
+            <% } %>
+          </tr>
+          <tr>
+            <td>
+              <a href="/recipe">
+              <img src="http://s2.cdn.xiachufang.com/78b1097c8a4211e6b87c0242ac110003_1280w_722h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
+            </a>
+            </td>
+            <td><a href="/recipe">Sweet Treat</a></td>
+            <td>55 mins</td>
+            <td>Bread, Butter</td>
+            <% if (profile_set) { %>
+              <td>Missing Butter</td>
+            <% } %>
+          </tr>
+          <tr>
+            <td>
+              <a href="/recipe">
+              <img src="http://s2.cdn.xiachufang.com/8f8ebb20880411e6b87c0242ac110003_895w_1171h.jpg?imageView2/1/w/140/h/106/interlace/1/q/90" />
+            </a>
+            </td>
+            <td><a href="/recipe">Birthday Cake</a></td>
+            <td>1 hr 25 mins</td>
+            <td>Flour, Sugar, Ice Cream, Strawberries, Milk, Eggs</td>
+            <% if (profile_set) { %>
+              <td>Missing ice cream</td>
+            <% } %>
+        </tbody>
+      </table>
 
+      <% if (profile_set) { %>
+        <p><small>* Note: This application does not track every ingredient.</small></p>
+      <% } %>
 
     </div>
 

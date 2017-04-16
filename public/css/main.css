@@ -23,8 +23,3 @@
 .arrows button {
   display: inline-block;
 }
-
-.ingr-missing {
-  background-color: rgba(155, 0, 0, 0.5);
-  padding: .25em;
-}
