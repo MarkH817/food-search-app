@@ -28,7 +28,7 @@
 
       <form id="kitchen-input" role="form" action="/kitchen-profile" method="post">
         <section class="tools-equipment">
-          <h2>Tools &amp; Equipment</h2>
+          <h3>Tools &amp; Equipment</h3>
 
           <section class="select-group">
             <label class="btn btn-default" for="tae-1">
@@ -81,13 +81,22 @@
           </section>
         </section>
 
+        <hr/>
+
         <section class="ingredients">
-          <h2>Ingredients</h2>
+          <h3>Ingredients</h3>
 
-          <div class="sliding-menu">
-            <div class="ingredient-category current">
-              <h4>Baking/Grain</h4>
+          <div class="sliding-menu tab-content">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#1" data-toggle="tab">Baking/Grain</a></li>
+              <li><a href="#2" data-toggle="tab">Dairy</a></li>
+              <li><a href="#3" data-toggle="tab">Fruit</a></li>
+              <li><a href="#4" data-toggle="tab">Meat/Poultry/Seafood</a></li>
+              <li><a href="#5" data-toggle="tab">Spices/Herbs/Condiments</a></li>
+              <li><a href="#6" data-toggle="tab">Vegetables</a></li>
+            </ul>
 
+            <div id="1" class="ingredient-category tab-pane fade in active">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-1-1">
                   <input id="ingr-1-1" type="checkbox" name="bakingPowder"
@@ -151,9 +160,7 @@
               </section>
             </div>
 
-            <div class="ingredient-category hide">
-              <h4>Dairy</h4>
-
+            <div id="2" class="ingredient-category tab-pane fade">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-2-1">
                   <input id="ingr-2-1" type="checkbox" name="creamCheese"
@@ -187,9 +194,7 @@
               </section>
             </div>
 
-            <div class="ingredient-category hide">
-              <h4>Fruit</h4>
-
+            <div id="3" class="ingredient-category tab-pane fade">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-3-1">
                   <input id="ingr-3-1" type="checkbox" name="apples"
@@ -247,9 +252,7 @@
               </section>
             </div>
 
-            <div class="ingredient-category hide">
-              <h4>Meat/Poultry/Seafood</h4>
-
+            <div id="4" class="ingredient-category tab-pane fade">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-4-1">
                   <input id="ingr-4-1" type="checkbox" name="beef"
@@ -307,9 +310,7 @@
               </section>
             </div>
 
-            <div class="ingredient-category hide">
-              <h4>Spices/Herbs/Condiments</h4>
-
+            <div id="5" class="ingredient-category tab-pane fade">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-5-1">
                   <input id="ingr-5-1" type="checkbox" name="cinnamon"
@@ -373,9 +374,7 @@
               </section>
             </div>
 
-            <div class="ingredient-category hide">
-              <h4>Vegetables</h4>
-
+            <div id="6" class="ingredient-category tab-pane fade">
               <section class="select-group">
                 <label class="btn btn-default" for="ingr-6-1">
                   <input id="ingr-6-1" type="checkbox" name="broccoli"
@@ -429,22 +428,13 @@
           </div>
         </section>
 
-        <div class="arrows">
-          <button id="prev" type="button" class="btn btn-default">&lt; Previous</button>
-          <span id="location" class="btn">1 / 6</span>
-          <button id="next" type="button" class="btn btn-default">Next &gt;</button>
-        </div>
-
         <div class="submission">
+          <p><small>* Note: This application does not track every ingredient.</small></p>
           <a class="btn btn-default" href="/reset">Reset</a>
           <input class="btn btn-primary" type="submit" value="Save">
         </div>
       </form>
     </div>
-
-    <script type="text/javascript">
-      var page = 1
-    </script>
 
     <% include ../partials/scripts %>
   </body>
